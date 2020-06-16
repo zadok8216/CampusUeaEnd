@@ -1,5 +1,5 @@
-# Equipe3_campusUEA
+# App_campusUEA
 
 
-## Descrição do trabalho
-App para cadastro do campus da UEA com sua respectiva localização. 
+## App description
+App for registering the UEA campus with its respective location. 
