@@ -1,4 +1,4 @@
-package com.gabriel.campusuea
+package com.gabriel.campusuea_g
 
 import org.junit.Test
 
