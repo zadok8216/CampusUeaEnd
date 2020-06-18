@@ -4,5 +4,5 @@ data class Campus(
     val campusName: String,
     val cityName: String,
     val address: String,
-    val phoneNumber: String,
+    val phoneNumber: String
 )

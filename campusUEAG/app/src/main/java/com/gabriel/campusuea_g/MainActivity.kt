@@ -1,5 +1,6 @@
 package com.gabriel.campusuea_g
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
             "Reitoria",
             "Manaus",
             "Av. Djalma Batista, 3578. Flores, Manaus - AM",
-            "(92) 3214-5778",
+            "(92) 3214-5778"
         ),
         Campus(
             "Escola Normal Superior",
@@ -65,10 +66,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        rvCampus.adapter = CampusAdapter(campi)
+        rvCampus.adapter = CampusAdapter(campi) {
+            startActivity(Intent(this, CampusDetailActivity::class.java))
+        }
+
+//
     }
 
-    class CampusAdapter(private val campus: List<Campus>): RecyclerView.Adapter<CampusAdapter.CampusViewHolder>() {
+    class CampusAdapter(
+        private val campus: List<Campus>,
+        private val onItemClick: (Campus) -> Unit
+
+    ): RecyclerView.Adapter<CampusAdapter.CampusViewHolder>() {
         class CampusViewHolder(itemView: View): RecyclerView.ViewHolder(itemView)
 
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CampusViewHolder {
@@ -81,6 +90,10 @@ class MainActivity : AppCompatActivity() {
         override fun onBindViewHolder(holder: CampusViewHolder, position: Int) {
             holder.itemView.tvCampusName.text = campus[position].campusName
             holder.itemView.tvCityName.text = campus[position].cityName
+
+            holder.itemView.setOnClickListener {
+                onItemClick(campus[position])
+            }
         }
     }
 }
