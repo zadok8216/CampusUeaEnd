@@ -2,4 +2,4 @@
 
 
 ## App description
-App for registering the UEA campus with its respective location. 
+App for registering the UEA campus with its respective location. Contains two screens.
