@@ -10,12 +10,12 @@
         style="@style/text_universitity"
         android:layout_marginStart="16dp"
         android:layout_marginTop="4dp"
-        android:text="@string/reitoria"
+        android:text="@string/cesit"
         app:layout_constraintStart_toEndOf="@id/ivImageCampus"
         app:layout_constraintTop_toTopOf="@id/ivImageCampus"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="22dp"
-        android:layout_width="240dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
 
@@ -37,11 +37,11 @@
         android:id="@+id/tvCityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Manaus"
+        android:text="@string/city_itacoatiara"
         android:textColor="#288437"
         android:textStyle="bold"
         android:background="@android:color/white"
-        android:textSize="14sp"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@id/tvCampusName"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginRight="24dp"
