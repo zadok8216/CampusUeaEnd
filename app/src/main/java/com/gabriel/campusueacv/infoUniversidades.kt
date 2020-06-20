@@ -15,19 +15,19 @@ class infoUniversidades : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_info_universidades)
-        intent.getParcelableExtra<Campus>(CAMPUS_EXTRA)?.let { campus ->
-            tvName.text = campus.campusName
-            tvCidade.text = campus.cityName
-            tvAdressInput.text = campus.address
-            tvFoneInput.text = campus.phoneNumber
+        intent.getParcelableExtra<Campus>(CAMPUS_EXTRA)?.let { Campus ->
+            tvName.text = Campus.campusName
+            tvCidade.text = Campus.cityName
+            tvAdressInput.text = Campus.address
+            tvFoneInput.text = Campus.phoneNumber
 
             val mapFragment = supportFragmentManager.findFragmentById(R.id.mapFragment) as SupportMapFragment
             mapFragment.getMapAsync {
                 it.uiSettings.isZoomControlsEnabled = true
 
-                val latLng = LatLng(campus.latitude, campus.longitude)
+                val latLng = LatLng(Campus.latitude, Campus.longitude)
 
-                val marker = MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_if))
+                val marker = MarkerOptions().position(latLng)
 
                 it.addMarker(marker)
 

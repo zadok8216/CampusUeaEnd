@@ -4,16 +4,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fillViewport="true"
     tools:context=".infoUniversidades">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".infoUniversidades">
 
         <TextView
@@ -62,7 +59,7 @@
             android:id="@+id/tvAdress"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="135dp"
+            android:layout_marginTop="125dp"
             android:text="@string/address"
             android:textSize="14sp"
             android:textColor="#333333"
@@ -108,7 +105,7 @@
             android:id="@+id/tvLocationLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="270dp"
             android:text="@string/location"
             android:textColor="@android:color/black"
             android:textSize="18sp"
@@ -121,15 +118,15 @@
             android:id="@+id/mapFragment"
             android:name="com.google.android.gms.maps.SupportMapFragment"
             android:layout_width="0dp"
-            android:layout_height="312dp"
-            android:layout_marginTop="24dp"
+            android:layout_height="275dp"
+            android:layout_marginTop="10dp"
             android:layout_marginBottom="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/guideEnd"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@id/guideStart"
             app:layout_constraintTop_toBottomOf="@id/tvLocationLabel"
-            app:layout_constraintVertical_bias="0.201"
+            app:layout_constraintVertical_bias="0.065"
             tools:context=".PokemonDetailActivity" />
 
         <androidx.constraintlayout.widget.Guideline
